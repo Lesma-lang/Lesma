@@ -13,7 +13,7 @@
         <meta name="description" content="The documentation of Lesma language">
       
       
-        <link rel="canonical" href="https://hassanalinali.github.io/Lesma/features/flow_control/">
+        <link rel="canonical" href="https://hassanalinali.github.io/Lesma/features/types/">
       
       
         <meta name="author" content="Alin Ali Hassan">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Flow Control - Lesma Documentation</title>
+        <title>Types - Lesma Documentation</title>
       
     
     
@@ -107,7 +107,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#while-loops" tabindex="1" class="md-skip">
+      <a href="#any" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -133,7 +133,7 @@
                 Lesma Documentation
               </span>
               <span class="md-header-nav__topic">
-                Flow Control
+                Types
               </span>
             
           
@@ -317,11 +317,108 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../types/" title="Types" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Types
+      </label>
+    
+    <a href="./" title="Types" class="md-nav__link md-nav__link--active">
       Types
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#any" title="Any" class="md-nav__link">
+    Any
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int" title="Int" class="md-nav__link">
+    Int
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#float" title="Float" class="md-nav__link">
+    Float
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#double" title="Double" class="md-nav__link">
+    Double
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#str" title="Str" class="md-nav__link">
+    Str
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool" title="Bool" class="md-nav__link">
+    Bool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array" title="Array" class="md-nav__link">
+    Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list" title="List" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dict" title="Dict" class="md-nav__link">
+    Dict
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range" title="Range" class="md-nav__link">
+    Range
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -341,66 +438,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Flow Control
-      </label>
-    
-    <a href="./" title="Flow Control" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../flow_control/" title="Flow Control" class="md-nav__link">
       Flow Control
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#while-loops" title="While loops" class="md-nav__link">
-    While loops
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#for-loops" title="For loops" class="md-nav__link">
-    For loops
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-else-statements" title="If else statements" class="md-nav__link">
-    If else statements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#switch-statement" title="Switch statement" class="md-nav__link">
-    Switch statement
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -452,29 +494,71 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#while-loops" title="While loops" class="md-nav__link">
-    While loops
+  <a href="#any" title="Any" class="md-nav__link">
+    Any
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#for-loops" title="For loops" class="md-nav__link">
-    For loops
+  <a href="#int" title="Int" class="md-nav__link">
+    Int
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#if-else-statements" title="If else statements" class="md-nav__link">
-    If else statements
+  <a href="#float" title="Float" class="md-nav__link">
+    Float
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#switch-statement" title="Switch statement" class="md-nav__link">
-    Switch statement
+  <a href="#double" title="Double" class="md-nav__link">
+    Double
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#str" title="Str" class="md-nav__link">
+    Str
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool" title="Bool" class="md-nav__link">
+    Bool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array" title="Array" class="md-nav__link">
+    Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list" title="List" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dict" title="Dict" class="md-nav__link">
+    Dict
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range" title="Range" class="md-nav__link">
+    Range
   </a>
   
 </li>
@@ -495,82 +579,131 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/hassanalinali/Lesma/edit/master/docs/features/flow_control.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/hassanalinali/Lesma/edit/master/docs/features/types.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Flow Control</h1>
+                  <h1>Types</h1>
                 
-                <h2 id="while-loops">While loops</h2>
-<p>The expression is required to be of type bool.</p>
+                <p>Types are optional in Lesma, you can choose whether you specify them or not. Unspecified variable types are inferred at compile time.</p>
+<p>The type must be either a user-defined alias, struct or class, or a built-in type such as:</p>
+<ul>
+<li><code>Any</code></li>
+<li><code>Int</code></li>
+<li><code>Double</code></li>
+<li><code>Float</code></li>
+<li><code>Str</code></li>
+<li><code>Bool</code></li>
+<li><code>Array</code></li>
+<li><code>List</code></li>
+<li><code>Dict</code></li>
+<li><code>Range</code></li>
+</ul>
+<h2 id="any">Any</h2>
+<p>Any types can receive any kind of value, so it can receive any kind of value at any moment.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="k">while</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">any</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Hey there&quot;</span>
 </pre></div>
 </td></tr></table>
 
-<h2 id="for-loops">For loops</h2>
-<p>They can be used to iterate over ranges or lists.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Any not implemented yet!</p>
+</div>
+<h2 id="int">Int</h2>
+<p>There are multiple types of ints available based on width and signed/unsigned. They can get a minimum of 8 bits width and a maximum of 128. If the width is not specified, it's by default 64.
+  - Signed: <code>int</code>, <code>int8</code>, <code>int16</code>, <code>int32</code>, <code>int64</code>, <code>int128</code>
+  - Unsigned: <code>uint</code>, <code>uint8</code>, <code>uint16</code>, <code>uint32</code>, <code>uint64</code>, <code>uint128</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">27</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In Lesma, int and uint are by default 64 bits wide, and they will enlarge by themselves to 128 bits wide if needed. This is not the default behaviour if you specify the size yourself!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Unsigned Integers not implemented yet</p>
+</div>
+<h2 id="float">Float</h2>
+<p>Double is floating-point real number.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="double">Double</h2>
+<p>Double is double-precision, floating-point, real number.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="n">double</span> <span class="o">=</span> <span class="mf">172312.41923</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="str">Str</h2>
+<p>Str is Lesma's implementation of strings/char arrays. All Lesma strings support UTF-8.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="mf">0.</span><span class="o">.</span><span class="mi">10</span>
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;🍌&#39;</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;夜のコンサートは最高でした。&#39;</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="bool">Bool</h2>
+<p>Bools occupy only 1 bit, and can be either <code>true</code> or <code>false</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">true</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="array">Array</h2>
+<p>Arrays are mutable by default, are declared using square paranthesis, have dynamic size, start from 0, and the members are accessed using the their index around square paranthesis.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Arrays currently only support integers, no other types!</p>
+</div>
+<h2 id="list">List</h2>
+<p>Lists are like arrays, but immutable, and declared using round paranthesis.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Lists are not yet implemented!</p>
+</div>
+<h2 id="dict">Dict</h2>
+<p>Dictionaries are lists of key-value pairs (similar to hashmaps), and they're mutable</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Samus&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Aran&#39;</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">])</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Dicts are not yet implemented!</p>
+</div>
+<h2 id="range">Range</h2>
+<p>Ranges are similar to Python's ranges, defined using <code>start..end</code> kind of syntax, and they're especially used for loops</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="mf">0.</span><span class="o">.</span><span class="mi">100</span>
     <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">my_list</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<h2 id="if-else-statements">If else statements</h2>
-<p>The expression is required to be of type bool.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">true</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Then do this&quot;</span><span class="p">)</span>
-<span class="k">else</span> <span class="k">if</span> <span class="n">true</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Never reached&quot;</span><span class="p">)</span>
-<span class="k">else</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Not even&quot;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-
-<h2 id="switch-statement">Switch statement</h2>
-<p><strong>Every case needs a break</strong> if you don't want to continue the flow to the next case, only the last case doesn't need a break, this means that the default would still need one if it's not the last case of the switch statement.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">coins</span> <span class="o">=</span> <span class="mi">5</span>
-
-<span class="n">switch</span> <span class="n">coins</span>
-    <span class="n">case</span> <span class="mi">1</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;You got only one?&#39;</span><span class="p">)</span>
-    <span class="n">case</span> <span class="mi">2</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Now we</span><span class="se">\&#39;</span><span class="s1">re talking&#39;</span><span class="p">)</span>
-        <span class="k">break</span>
-    <span class="n">default</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">coins</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You got a lot of coins in there&quot;</span><span class="p">)</span>
-    <span class="n">case</span> <span class="mi">3</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;I guess 3 is enough&#39;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ranges can not currently be assigned to variables</p>
+</div>
                 
                   
                 
@@ -591,7 +724,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../operators/" title="Operators" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../keywords/" title="Keywords" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -600,19 +733,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Operators
+                Keywords
               </span>
             </div>
           </a>
         
         
-          <a href="../../TODO/" title="TODO" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../operators/" title="Operators" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                TODO
+                Operators
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

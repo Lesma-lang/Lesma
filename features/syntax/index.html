@@ -13,7 +13,7 @@
         <meta name="description" content="The documentation of Lesma language">
       
       
-        <link rel="canonical" href="https://hassanalinali.github.io/Lesma/features/variables/">
+        <link rel="canonical" href="https://hassanalinali.github.io/Lesma/features/syntax/">
       
       
         <meta name="author" content="Alin Ali Hassan">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Variables - Lesma Documentation</title>
+        <title>Syntax - Lesma Documentation</title>
       
     
     
@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="#03a9f4">
+        <meta name="theme-color" content="#2196f3">
       
     
     
@@ -69,12 +69,14 @@
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../css/extra.css">
+    
     
   </head>
   
     
     
-    <body dir="ltr" data-md-color-primary="light-blue" data-md-color-accent="">
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="blue">
   
     <svg class="md-svg">
       <defs>
@@ -127,7 +129,7 @@
                 Lesma Documentation
               </span>
               <span class="md-header-nav__topic">
-                Variables
+                Syntax
               </span>
             
           
@@ -295,10 +297,46 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="Variables" class="md-nav__link md-nav__link--active">
-      Variables
+    <a href="./" title="Syntax" class="md-nav__link md-nav__link--active">
+      Syntax
     </a>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../keywords/" title="Keywords" class="md-nav__link">
+      Keywords
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/" title="Types" class="md-nav__link">
+      Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../operators/" title="Operators" class="md-nav__link">
+      Operators
+    </a>
   </li>
 
         
@@ -316,6 +354,18 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../TODO/" title="TODO" class="md-nav__link">
+      TODO
+    </a>
   </li>
 
     
@@ -343,12 +393,70 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/hassanalinali/Lesma/edit/master/docs/features/variables.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/hassanalinali/Lesma/edit/master/docs/features/syntax.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Variables</h1>
+                  <h1>Syntax</h1>
                 
-                
+                <ul>
+<li>Whitespace is signifiant, indentation uses either Tabs or exactly 4 spaces</li>
+<li>Flow control statements, structs, classes and functions require an indentation</li>
+<li>Lesma's Checker will report any invalid syntax or unrecommended behaviour, such incompatible types for operations, or unused variables.</li>
+<li><code>_</code> variable name is used as an ignored result, and is treated differently by the compiler (similar to golang)</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">do_that</span><span class="p">()</span>
+    <span class="k">pass</span>
+
+<span class="k">if</span> <span class="n">true</span>
+    <span class="n">do_that</span><span class="p">()</span>
+<span class="k">else</span> <span class="k">if</span> <span class="n">false</span>
+    <span class="k">if</span> <span class="n">true</span>
+        <span class="k">pass</span>
+    <span class="n">do_that</span><span class="p">()</span>
+<span class="k">else</span>
+    <span class="n">do_that</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="mf">0.</span><span class="o">.</span><span class="mi">20</span>
+    <span class="n">do_that</span><span class="p">()</span>
+
+<span class="k">while</span><span class="p">(</span><span class="n">false</span><span class="p">)</span>
+    <span class="n">do_that</span><span class="p">()</span>
+
+<span class="n">struct</span> <span class="n">thing</span>
+    <span class="n">x</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">y</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">z</span><span class="p">:</span> <span class="n">double</span>
+
+<span class="k">class</span> <span class="nc">Example</span>
+    <span class="n">new</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="n">this</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+</pre></div>
+</td></tr></table>
                 
                   
                 
@@ -384,13 +492,13 @@
           </a>
         
         
-          <a href="../flow_control/" title="Flow Control" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../keywords/" title="Keywords" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Flow Control
+                Keywords
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
