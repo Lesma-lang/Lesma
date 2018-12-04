@@ -587,13 +587,15 @@
 163
 164
 165
-166</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Hello World</span>
+166
+167</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Hello World</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;🍌&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;夜のコンサートは最高でした。&#39;</span><span class="p">)</span>
 
 <span class="n">a_number</span><span class="p">:</span> <span class="nb">int</span> <span class="c1"># Initialize an Integer</span>
 
+<span class="err">π</span> <span class="o">=</span> <span class="mf">3.14</span> <span class="c1"># Support for utf-8 variable names</span>
 <span class="n">number</span> <span class="o">=</span> <span class="mi">23</span> <span class="c1"># Type Inference, int in this case</span>
 <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">^</span> <span class="mi">3</span> <span class="c1"># Number operations</span>
 <span class="n">number</span><span class="o">+=</span><span class="mi">5</span> <span class="c1"># Operating Assignment</span>
@@ -719,12 +721,12 @@
 <span class="c1"># String Interpolation</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Wow! You are {age} years old?!&#39;</span><span class="p">)</span>
 
-<span class="n">enum</span> <span class="n">Colors</span><span class="p">(</span>
-    <span class="n">GREEN</span><span class="p">,</span>
-    <span class="n">RED</span><span class="p">,</span>
-    <span class="n">BLUE</span><span class="p">,</span>
+<span class="n">enum</span> <span class="n">Colors</span>
+    <span class="n">GREEN</span>
+    <span class="n">RED</span>
+    <span class="n">BLUE</span>
     <span class="n">YELLOW</span>
-<span class="p">)</span>
+
 
 <span class="n">struct</span> <span class="n">Circle</span>
     <span class="n">radius</span><span class="p">:</span> <span class="nb">int</span>
