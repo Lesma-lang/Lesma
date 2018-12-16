@@ -588,7 +588,15 @@
 164
 165
 166
-167</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Hello World</span>
+167
+168
+169
+170
+171
+172
+173
+174
+175</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Hello World</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;🍌&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;夜のコンサートは最高でした。&#39;</span><span class="p">)</span>
@@ -684,6 +692,14 @@
 <span class="n">bar</span> <span class="o">=</span> <span class="n">myfunc</span>
 <span class="k">print</span><span class="p">(</span><span class="n">bar</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
 
+<span class="c1"># Type operators using `as` and `is`</span>
+<span class="n">my_var</span><span class="p">:</span> <span class="n">int128</span> <span class="o">=</span> <span class="mi">101</span>
+<span class="n">my_another_var</span><span class="p">:</span> <span class="n">int64</span> <span class="o">=</span> <span class="n">my_var</span> <span class="k">as</span> <span class="n">int64</span>
+
+<span class="k">if</span> <span class="n">my_var</span> <span class="ow">is</span> <span class="n">int64</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s not true&quot;</span><span class="p">)</span>
+<span class="k">else</span> <span class="k">if</span> <span class="n">my_var</span> <span class="k">as</span> <span class="n">int64</span> <span class="ow">is</span> <span class="n">int64</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;That works too&quot;</span><span class="p">)</span>
 
 <span class="c1"># Type Aliasing</span>
 <span class="nb">type</span> <span class="n">fInt</span> <span class="o">=</span> <span class="n">func</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nb">int</span>
