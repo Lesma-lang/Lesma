@@ -381,6 +381,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#operator-overloading" title="Operator Overloading" class="md-nav__link">
+    Operator Overloading
+  </a>
+  
+</li>
+      
       
       
       
@@ -475,6 +482,13 @@
         <li class="md-nav__item">
   <a href="#assignment-operators" title="Assignment operators" class="md-nav__link">
     Assignment operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operator-overloading" title="Operator Overloading" class="md-nav__link">
+    Operator Overloading
   </a>
   
 </li>
@@ -709,6 +723,25 @@
 </tr>
 </tbody>
 </table>
+<h2 id="operator-overloading">Operator Overloading</h2>
+<p>Operators can be user-defined by defining functions using the keyword <code>operator</code> followed by the specified operator, and with one (for unary operators) or two (for binary operators)</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">operator</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+    <span class="k">return</span> <span class="mi">42</span>
+
+<span class="k">def</span> <span class="nf">operator</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">print</span><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Prints 42</span>
+<span class="k">print</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">)</span>  <span class="c1"># Prints 0</span>
+</pre></div>
+</td></tr></table>
                 
                   
                 

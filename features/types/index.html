@@ -584,7 +584,12 @@
                 
                   <h1>Types</h1>
                 
-                <p>Types are optional in Lesma, you can choose whether you specify them or not. Unspecified variable types are inferred at compile time.</p>
+                <p>Types are optional in Lesma, you can choose whether you specify them or not. Unspecified variable types are inferred at compile time from the value of the assignment.</p>
+<p>Operations between different types will either be casted to the larger type if the two types are compatible, or give an error otherwise. Two types are compatible if they are different sizes of the same group type (such as ints or floating points).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Types that are not specified are inferred, this is fundamentally different to dynamic types!</p>
+</div>
 <p>The type must be either a user-defined alias, struct or class, or a built-in type such as:</p>
 <ul>
 <li><code>Any</code></li>
@@ -615,8 +620,12 @@
   - Signed: <code>int</code>, <code>int8</code>, <code>int16</code>, <code>int32</code>, <code>int64</code>, <code>int128</code>
   - Unsigned: <code>uint</code>, <code>uint8</code>, <code>uint16</code>, <code>uint32</code>, <code>uint64</code>, <code>uint128</code></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="mi">27</span>
+
+<span class="n">large_num</span><span class="p">:</span> <span class="n">int128</span> <span class="o">=</span> <span class="mi">5</span>
 </pre></div>
 </td></tr></table>
 
@@ -624,18 +633,14 @@
 <p class="admonition-title">Info</p>
 <p>In Lesma, int and uint are by default 64 bits wide, and they will enlarge by themselves to 128 bits wide if needed. This is not the default behaviour if you specify the size yourself!</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Unsigned Integers not implemented yet</p>
-</div>
 <h2 id="float">Float</h2>
-<p>Double is floating-point real number.</p>
+<p>Float is floating-point real number.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span>
 </pre></div>
 </td></tr></table>
 
 <h2 id="double">Double</h2>
-<p>Double is double-precision, floating-point, real number.</p>
+<p>Double is double-precision floating-point real number.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="n">double</span> <span class="o">=</span> <span class="mf">172312.41923</span>
 </pre></div>
 </td></tr></table>
