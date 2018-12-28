@@ -384,15 +384,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#array" title="Array" class="md-nav__link">
-    Array
+  <a href="#list" title="List" class="md-nav__link">
+    List
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#list" title="List" class="md-nav__link">
-    List
+  <a href="#tuple" title="Tuple" class="md-nav__link">
+    Tuple
   </a>
   
 </li>
@@ -536,15 +536,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#array" title="Array" class="md-nav__link">
-    Array
+  <a href="#list" title="List" class="md-nav__link">
+    List
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#list" title="List" class="md-nav__link">
-    List
+  <a href="#tuple" title="Tuple" class="md-nav__link">
+    Tuple
   </a>
   
 </li>
@@ -598,8 +598,8 @@
 <li><code>Float</code></li>
 <li><code>Str</code></li>
 <li><code>Bool</code></li>
-<li><code>Array</code></li>
 <li><code>List</code></li>
+<li><code>Tuple</code></li>
 <li><code>Dict</code></li>
 <li><code>Range</code></li>
 </ul>
@@ -646,7 +646,7 @@
 </td></tr></table>
 
 <h2 id="str">Str</h2>
-<p>Str is Lesma's implementation of strings/char arrays. All Lesma strings support UTF-8.</p>
+<p>Str is Lesma's implementation of strings/char lists. All Lesma strings support UTF-8.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
@@ -661,8 +661,8 @@
 </pre></div>
 </td></tr></table>
 
-<h2 id="array">Array</h2>
-<p>Arrays are mutable by default, are declared using square paranthesis, have dynamic size, start from 0, and the members are accessed using the their index around square paranthesis.</p>
+<h2 id="list">List</h2>
+<p>Lists are mutable by default, are declared using square paranthesis, have dynamic size, start from 0, and the members are accessed using the their index around square paranthesis.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
@@ -671,10 +671,10 @@
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Arrays currently only support integers, no other types!</p>
+<p>Lists currently only support integers, no other types!</p>
 </div>
-<h2 id="list">List</h2>
-<p>Lists are like arrays, but immutable, and declared using round paranthesis.</p>
+<h2 id="tuple">Tuple</h2>
+<p>Tuples are like lists, but immutable, and declared using round paranthesis.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -683,7 +683,7 @@
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Lists are not yet implemented!</p>
+<p>Tuples are not yet implemented!</p>
 </div>
 <h2 id="dict">Dict</h2>
 <p>Dictionaries are lists of key-value pairs (similar to hashmaps), and they're mutable</p>
