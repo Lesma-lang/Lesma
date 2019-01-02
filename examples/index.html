@@ -604,7 +604,23 @@
 180
 181
 182
-183</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Hello World</span>
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Hello World</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;🍌&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;夜のコンサートは最高でした。&#39;</span><span class="p">)</span>
@@ -740,7 +756,7 @@
 <span class="k">print</span><span class="p">(</span><span class="n">start_at_27</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
 
 <span class="c1"># User input</span>
-<span class="n">Int</span> <span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you?&#39;</span><span class="p">)</span>
+<span class="n">age</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you?&#39;</span><span class="p">)</span>
 
 <span class="c1"># String Interpolation</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Wow! You are {age} years old?!&#39;</span><span class="p">)</span>
@@ -752,23 +768,39 @@
 <span class="k">def</span> <span class="nf">operator</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>  <span class="c1"># One parameters overloads binary operations</span>
     <span class="k">return</span> <span class="mi">0</span> <span class="o">-</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
 
+<span class="c1"># Extern functions (FFI)</span>
+<span class="k">def</span> <span class="nf">extern</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="c1"># from C&#39;s stdlib</span>
 
+<span class="k">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mf">5.0</span> <span class="k">as</span> <span class="nb">int</span><span class="p">))</span> <span class="c1"># ints are int64 by default in Lesma, they&#39;re int32 in C</span>
+
+<span class="c1"># or you can just let Lesma convert between &quot;compatible&quot; types such as numbers</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mf">5.0</span><span class="p">))</span>
+
+<span class="c1"># Named parameters and defaults</span>
+<span class="k">def</span> <span class="nf">optional_params</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">int32</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">z</span><span class="p">:</span> <span class="n">double</span> <span class="o">=</span> <span class="mi">9</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+    <span class="c1"># Lesma takes care of casting the return type between &quot;compatible&quot; types</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">z</span>
+
+<span class="n">optional_params</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+
+<span class="c1"># Enums</span>
 <span class="n">enum</span> <span class="n">Colors</span>
     <span class="n">GREEN</span>
     <span class="n">RED</span>
     <span class="n">BLUE</span>
     <span class="n">YELLOW</span>
 
-
+<span class="c1"># Structs</span>
 <span class="n">struct</span> <span class="n">Circle</span>
     <span class="n">radius</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">x</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">y</span><span class="p">:</span> <span class="nb">int</span>
 
-<span class="n">cir</span><span class="p">:</span> <span class="n">Circle</span> <span class="o">=</span> <span class="p">{</span><span class="n">radius</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">4</span><span class="p">}</span>
+<span class="n">cir</span><span class="p">:</span> <span class="n">Circle</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">cir</span><span class="o">.</span><span class="n">radius</span><span class="p">)</span>
 
+<span class="c1"># Classes</span>
 <span class="k">class</span> <span class="nc">Vehicle</span>
     <span class="c1"># Constructor</span>
     <span class="n">new</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
