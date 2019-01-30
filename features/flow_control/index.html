@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="The documentation of Lesma language">
+        <meta name="description" content="Lesma Documentation">
       
       
         <link rel="canonical" href="https://hassanalinali.github.io/Lesma/features/flow_control/">
@@ -317,30 +317,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../types/" title="Types" class="md-nav__link">
-      Types
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../operators/" title="Operators" class="md-nav__link">
-      Operators
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -401,6 +377,66 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../structs/" title="Structs" class="md-nav__link">
+      Structs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../classes/" title="Classes" class="md-nav__link">
+      Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../enums/" title="Enums" class="md-nav__link">
+      Enums
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/" title="Types" class="md-nav__link">
+      Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../operators/" title="Operators" class="md-nav__link">
+      Operators
+    </a>
   </li>
 
         
@@ -501,7 +537,7 @@
                   <h1>Flow Control</h1>
                 
                 <h2 id="while-loops">While loops</h2>
-<p>The expression is required to be of type bool.</p>
+<p>The evaluation expression is required to be of type bool.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -527,7 +563,7 @@
 </td></tr></table>
 
 <h2 id="if-else-statements">If else statements</h2>
-<p>The expression is required to be of type bool.</p>
+<p>The evaluation expression is required to be of type bool.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -543,7 +579,7 @@
 </td></tr></table>
 
 <h2 id="switch-statement">Switch statement</h2>
-<p><strong>Every case needs a break</strong> if you don't want to continue the flow to the next case, only the last case doesn't need a break, this means that the default would still need one if it's not the last case of the switch statement.</p>
+<p><strong>No implicit fallthrough</strong>, this means that in comparison with languages like C, the equivalent to a break statement is implicit in Lesma, therefore you need to specify the <code>fallthrough</code> keyword for the flow to go downstream to the other cases. Break statements are not allowed inside a switch statement.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -555,20 +591,18 @@
  9
 10
 11
-12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">coins</span> <span class="o">=</span> <span class="mi">5</span>
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">odd_even</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="n">switch</span> <span class="n">coins</span>
+<span class="n">switch</span> <span class="n">odd_even</span>
     <span class="n">case</span> <span class="mi">1</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;You got only one?&#39;</span><span class="p">)</span>
-    <span class="n">case</span> <span class="mi">2</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Now we</span><span class="se">\&#39;</span><span class="s1">re talking&#39;</span><span class="p">)</span>
-        <span class="k">break</span>
-    <span class="n">default</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">coins</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You got a lot of coins in there&quot;</span><span class="p">)</span>
+        <span class="n">fallthrough</span> <span class="c1"># Go to the next case</span>
     <span class="n">case</span> <span class="mi">3</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;I guess 3 is enough&#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Odd number&#39;</span><span class="p">)</span>
+    <span class="n">default</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Any number&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">odd_even</span><span class="p">)</span>
+    <span class="n">case</span> <span class="mi">4</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Even number&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
                 
@@ -591,7 +625,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../operators/" title="Operators" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../keywords/" title="Keywords" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -600,19 +634,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Operators
+                Keywords
               </span>
             </div>
           </a>
         
         
-          <a href="../../TODO/" title="TODO" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../structs/" title="Structs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                TODO
+                Structs
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -628,7 +662,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2018 Alin Ali Hassan
+            Copyright &copy; 2019 Alin Ali Hassan
           </div>
         
         powered by

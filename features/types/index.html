@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="The documentation of Lesma language">
+        <meta name="description" content="Lesma Documentation">
       
       
         <link rel="canonical" href="https://hassanalinali.github.io/Lesma/features/types/">
@@ -317,6 +317,54 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../flow_control/" title="Flow Control" class="md-nav__link">
+      Flow Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../structs/" title="Structs" class="md-nav__link">
+      Structs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../classes/" title="Classes" class="md-nav__link">
+      Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../enums/" title="Enums" class="md-nav__link">
+      Enums
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -419,6 +467,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#func" title="Func" class="md-nav__link">
+    Func
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void" title="Void" class="md-nav__link">
+    Void
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -470,18 +532,6 @@
   <li class="md-nav__item">
     <a href="../operators/" title="Operators" class="md-nav__link">
       Operators
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../flow_control/" title="Flow Control" class="md-nav__link">
-      Flow Control
     </a>
   </li>
 
@@ -611,6 +661,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#func" title="Func" class="md-nav__link">
+    Func
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void" title="Void" class="md-nav__link">
+    Void
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -666,10 +730,10 @@
                 
                 <p>Types are optional in Lesma, you can choose whether you specify them or not. Unspecified variable types are inferred at compile time from the value of the assignment.</p>
 <p>Operations between different types will either be casted to the larger type if the two types are compatible, or give an error otherwise. Two types are compatible if they are different sizes of the same group type (such as ints or floating points).</p>
-<p>The type must be either a user-defined alias, a struct or class, or a built-in type.</p>
+<p>The type must be either a user-defined type, a struct, enum, class, or a built-in type.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Types that are not specified are inferred, this is fundamentally different to dynamic types!</p>
+<p>Types that are not specified are inferred, this is fundamentally different in comparison to dynamic types!</p>
 </div>
 <hr />
 <h2 id="built-in-types">Built-in Types</h2>
@@ -683,7 +747,7 @@
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Any not implemented yet!</p>
+<p>Any type is not implemented yet!</p>
 </div>
 <h3 id="int">Int</h3>
 <p>There are multiple types of ints available based on width and signed/unsigned. They can get a minimum of 8 bits width and a maximum of 128. If the width is not specified, it's by default 64.
@@ -711,7 +775,9 @@
 
 <h3 id="double">Double</h3>
 <p>Double is double-precision floating-point real number.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="n">double</span> <span class="o">=</span> <span class="mf">172312.41923</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="n">double</span> <span class="o">=</span> <span class="mf">172312.41923</span>
+<span class="n">my_inf</span> <span class="o">=</span> <span class="n">inf</span> <span class="c1"># inf is infinity as specified by IEEE 754</span>
 </pre></div>
 </td></tr></table>
 
@@ -732,29 +798,26 @@
 </td></tr></table>
 
 <h3 id="list">List</h3>
-<p>Lists are mutable by default, are declared using square paranthesis, have dynamic size, start from 0, and the members are accessed using the their index around square paranthesis.</p>
+<p>Lists are mutable by default, are declared using square paranthesis, have dynamic size, start from 0, and the members are accessed using the their index around square paranthesis. The element can be declared between square braces. If the type is omitted, the list will have the type of the elements contained. </p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">y</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">double</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">5.5</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </td></tr></table>
 
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Lists currently only support integers, no other types!</p>
-</div>
 <h3 id="tuple">Tuple</h3>
-<p>Tuples are like lists, but immutable, and declared using round paranthesis.</p>
+<p>Tuples are like lists, but immutable, and declared using round paranthesis.
+The element type can be declared between square braces. If the type is omitted, the list will have the type of the elements contained. </p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">y</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">double</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">5.5</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </td></tr></table>
 
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Tuples are not yet implemented!</p>
-</div>
 <h3 id="dict">Dict</h3>
 <p>Dictionaries are lists of key-value pairs (similar to hashmaps), and they're mutable</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -780,6 +843,53 @@
 <p>Ranges can not currently be assigned to variables</p>
 </div>
 <hr />
+<h3 id="func">Func</h3>
+<p>Lesma supports first class functions, meaning that variables can be assigned functions, and the type func is meant to annotate the type of the function.
+Parameter types are included between square braces <code>[]</code> separated by comma <code>,</code>, and the return type with arrow <code>-&gt;</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="n">func</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="o">=</span> <span class="k">def</span> <span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="k">def</span> <span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+
+<span class="n">z</span><span class="p">:</span> <span class="n">func</span> <span class="o">=</span> <span class="n">def</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="void">Void</h3>
+<p>Void is used only for function return types and are used to illustrate that the function does not return a value. If the return type of a function is omitted, void will be used by default. </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">example</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">void</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">example2</span><span class="p">()</span>  <span class="c1"># Here the return type is omitted</span>
+    <span class="k">pass</span>
+</pre></div>
+</td></tr></table>
+
 <h2 id="type-operations">Type Operations</h2>
 <h3 id="is">Is</h3>
 <p><code>Is</code> binary operator checks if the left operand's type matches the right operand and returns a bool as a result</p>
@@ -816,7 +926,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../keywords/" title="Keywords" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../enums/" title="Enums" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -825,7 +935,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Keywords
+                Enums
               </span>
             </div>
           </a>
@@ -853,7 +963,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2018 Alin Ali Hassan
+            Copyright &copy; 2019 Alin Ali Hassan
           </div>
         
         powered by

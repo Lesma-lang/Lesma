@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="The documentation of Lesma language">
+        <meta name="description" content="Lesma Documentation">
       
       
         <link rel="canonical" href="https://hassanalinali.github.io/Lesma/examples/">
@@ -326,6 +326,54 @@
 
 
   <li class="md-nav__item">
+    <a href="../features/flow_control/" title="Flow Control" class="md-nav__link">
+      Flow Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/structs/" title="Structs" class="md-nav__link">
+      Structs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/classes/" title="Classes" class="md-nav__link">
+      Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/enums/" title="Enums" class="md-nav__link">
+      Enums
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../features/types/" title="Types" class="md-nav__link">
       Types
     </a>
@@ -340,18 +388,6 @@
   <li class="md-nav__item">
     <a href="../features/operators/" title="Operators" class="md-nav__link">
       Operators
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../features/flow_control/" title="Flow Control" class="md-nav__link">
-      Flow Control
     </a>
   </li>
 
@@ -620,24 +656,48 @@
 196
 197
 198
-199</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Hello World</span>
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Hello World</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;🍌&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;夜のコンサートは最高でした。&#39;</span><span class="p">)</span>
 
 <span class="n">a_number</span><span class="p">:</span> <span class="nb">int</span> <span class="c1"># Initialize an Integer</span>
 
+<span class="c1"># Binary, Hex and Octal numbers supported</span>
+<span class="n">bin_num</span> <span class="o">=</span> <span class="mb">0b101010</span>
+<span class="n">octo_num</span> <span class="o">=</span> <span class="mi">0</span><span class="n">o1272</span>
+<span class="n">hex_num</span> <span class="o">=</span> <span class="mh">0x1272</span>
+
 <span class="err">π</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">3.14</span> <span class="c1"># Support for utf-8 variable names</span>
 <span class="n">number</span> <span class="o">=</span> <span class="mi">23</span> <span class="c1"># Type Inference, int in this case</span>
 <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">^</span> <span class="mi">3</span> <span class="c1"># Number operations</span>
 <span class="n">number</span><span class="o">+=</span><span class="mi">5</span> <span class="c1"># Operating Assignment</span>
 
+<span class="n">still_inf</span> <span class="o">=</span> <span class="n">inf</span> <span class="o">-</span> <span class="mi">999999</span> <span class="c1"># Still infinity</span>
+
 <span class="n">question</span> <span class="o">=</span> <span class="s1">&#39;what</span><span class="se">\&#39;</span><span class="s1">s going on&#39;</span> <span class="c1"># Escaping</span>
 
-<span class="n">things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="c1"># List, homogeneous</span>
-<span class="n">other_things</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Hello&#39;</span><span class="p">)</span> <span class="c1"># Tuple, non-homogeneous</span>
+<span class="n">things</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="c1"># List, mutable</span>
+<span class="n">other_things</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">)</span> <span class="c1"># Tuple, immutable</span>
 <span class="n">stuff</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Samus&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Aran&#39;</span><span class="p">}</span> <span class="c1"># Dictionary</span>
-<span class="n">other_stuff</span><span class="p">:</span> <span class="nb">int</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Empty Array of Ints</span>
+<span class="n">other_stuff</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Empty Array of ints</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">things</span><span class="p">[</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
 
@@ -669,19 +729,19 @@
 <span class="k">if</span> <span class="mi">2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">things</span>
     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;no&#39;</span><span class="p">)</span>
 
-<span class="n">special_num</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">odd_even</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="n">switch</span> <span class="n">special_num</span>
+<span class="c1"># No implicit fallthrough (in other words, implicit break)</span>
+<span class="n">switch</span> <span class="n">odd_even</span>
     <span class="n">case</span> <span class="mi">1</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Number one&#39;</span><span class="p">)</span>
-    <span class="n">case</span> <span class="mi">2</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Number two&#39;</span><span class="p">)</span>
-        <span class="k">break</span>
-    <span class="n">default</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Big number&quot;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">special_num</span><span class="p">)</span>
+        <span class="n">fallthrough</span> <span class="c1"># Go to the next case</span>
     <span class="n">case</span> <span class="mi">3</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Number three&#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Odd number&#39;</span><span class="p">)</span>
+    <span class="n">default</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Any number&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">odd_even</span><span class="p">)</span>
+    <span class="n">case</span> <span class="mi">4</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Even number&#39;</span><span class="p">)</span>
 
 <span class="c1"># Function Return notation</span>
 <span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>
@@ -725,7 +785,7 @@
 <span class="k">else</span> <span class="k">if</span> <span class="n">my_var</span> <span class="k">as</span> <span class="n">int64</span> <span class="ow">is</span> <span class="n">int64</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;That works&quot;</span><span class="p">)</span>
 
-<span class="c1"># Type Aliasing</span>
+<span class="c1"># Type Declaration</span>
 <span class="nb">type</span> <span class="n">fInt</span> <span class="o">=</span> <span class="n">func</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="nb">int</span>
 
 <span class="k">def</span> <span class="nf">do_stuff</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">callback</span><span class="p">:</span> <span class="n">fInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>
@@ -783,42 +843,52 @@
 
 <span class="n">optional_params</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
 
+<span class="k">def</span> <span class="nf">defer_demo</span><span class="p">()</span>
+    <span class="n">defer</span> <span class="k">print</span><span class="p">(</span><span class="s2">&quot;World!&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+
+<span class="n">defer_demo</span><span class="p">()</span> <span class="c1"># prints Hello World!</span>
+
 <span class="c1"># Enums</span>
-<span class="n">enum</span> <span class="n">Colors</span>
+<span class="n">enum</span> <span class="n">Color</span>
     <span class="n">GREEN</span>
     <span class="n">RED</span>
     <span class="n">BLUE</span>
     <span class="n">YELLOW</span>
 
+<span class="n">x</span><span class="p">:</span> <span class="n">Colors</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">GREEN</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">Color</span><span class="o">.</span><span class="n">GREEN</span><span class="p">)</span>
+
 <span class="c1"># Structs</span>
 <span class="n">struct</span> <span class="n">Circle</span>
     <span class="n">radius</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">x</span><span class="p">:</span> <span class="nb">int</span>
-    <span class="n">y</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
 
-<span class="n">cir</span><span class="p">:</span> <span class="n">Circle</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">cir</span><span class="p">:</span> <span class="n">Circle</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">cir</span><span class="o">.</span><span class="n">radius</span><span class="p">)</span>
 
 <span class="c1"># Classes</span>
 <span class="k">class</span> <span class="nc">Vehicle</span>
     <span class="c1"># Constructor</span>
-    <span class="n">new</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">new</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
         <span class="n">this</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
         <span class="n">this</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">color</span>
 
 <span class="c1"># Inheritance</span>
 <span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="n">Vehicle</span><span class="p">)</span>
-    <span class="n">new</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">hatchback</span><span class="o">=</span><span class="n">false</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">new</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">hatchback</span><span class="o">=</span><span class="n">false</span><span class="p">)</span>
         <span class="n">this</span><span class="o">.</span><span class="n">hatchback</span> <span class="o">=</span> <span class="n">hatchback</span>
         <span class="nb">super</span><span class="o">.</span><span class="n">Vehicle</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
 
-    <span class="n">print_year</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">void</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;This car was made in {this.year}&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">print_year</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">void</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;This car was made in {self.year}&#39;</span><span class="p">)</span>
 
 <span class="n">ford</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="mi">1992</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">ford</span><span class="o">.</span><span class="n">hatchback</span><span class="p">)</span>
+<span class="n">ford</span><span class="o">.</span><span class="n">print_year</span><span class="p">()</span>
 </pre></div>
 </td></tr></table>
                 
@@ -878,7 +948,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2018 Alin Ali Hassan
+            Copyright &copy; 2019 Alin Ali Hassan
           </div>
         
         powered by

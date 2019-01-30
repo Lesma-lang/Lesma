@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="The documentation of Lesma language">
+        <meta name="description" content="Lesma Documentation">
       
       
         <link rel="canonical" href="https://hassanalinali.github.io/Lesma/features/syntax/">
@@ -322,6 +322,54 @@
 
 
   <li class="md-nav__item">
+    <a href="../flow_control/" title="Flow Control" class="md-nav__link">
+      Flow Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../structs/" title="Structs" class="md-nav__link">
+      Structs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../classes/" title="Classes" class="md-nav__link">
+      Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../enums/" title="Enums" class="md-nav__link">
+      Enums
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../types/" title="Types" class="md-nav__link">
       Types
     </a>
@@ -336,18 +384,6 @@
   <li class="md-nav__item">
     <a href="../operators/" title="Operators" class="md-nav__link">
       Operators
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../flow_control/" title="Flow Control" class="md-nav__link">
-      Flow Control
     </a>
   </li>
 
@@ -400,7 +436,7 @@
                 
                 <ul>
 <li>Whitespace is signifiant, indentation uses either tabs or exactly 4 spaces</li>
-<li>Flow control statements, structs, classes and functions require indentation</li>
+<li>Flow control statements, structs, enums, classes and functions require indentation</li>
 <li>Lesma's Checker will report any invalid syntax or unrecommended behaviour, such incompatible types for operations, or unused variables.</li>
 <li><code>_</code> variable name is used as an ignored result, and is treated differently by the compiler (similar to golang)</li>
 </ul>
@@ -429,7 +465,8 @@
 23
 24
 25
-26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">do_that</span><span class="p">()</span>
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">do_that</span><span class="p">()</span>
     <span class="k">pass</span>
 
 <span class="k">if</span> <span class="n">true</span>
@@ -453,8 +490,9 @@
     <span class="n">z</span><span class="p">:</span> <span class="n">double</span>
 
 <span class="k">class</span> <span class="nc">Example</span>
+    <span class="n">x</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">new</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
 </pre></div>
 </td></tr></table>
                 
@@ -514,7 +552,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2018 Alin Ali Hassan
+            Copyright &copy; 2019 Alin Ali Hassan
           </div>
         
         powered by
